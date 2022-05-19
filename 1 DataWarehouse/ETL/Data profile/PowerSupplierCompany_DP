@@ -1,0 +1,755 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{DBAC3780-092E-47F0-91ED-032D94A3AAF2}" Name="Consumer_DP">
+      <DtsConnectionManagerID>Consumer_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{3883BFF9-1451-452E-A4B4-1342A6E9AD87}" Name="ConsumerAddress_DP">
+      <DtsConnectionManagerID>ConsumerAddress_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{F9BF367A-8008-44F8-AE12-6B1C3E404DDE}" Name="ConsumerDistribution_DP">
+      <DtsConnectionManagerID>ConsumerDistribution_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{0022FE8F-521A-4F75-B5D2-A09EF59BCAA6}" Name="ConsumerType_DP">
+      <DtsConnectionManagerID>ConsumerType_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D29A9154-9D02-4103-9C28-9A3E627F9383}" Name="dataprofile">
+      <DtsConnectionManagerID>dataprofile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{DF08EB2F-407B-408C-B813-BAC81ED23C35}" Name="InstallService_DP">
+      <DtsConnectionManagerID>InstallService_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{AEA3C9DC-C915-4942-9A51-318C5503266F}" Name="PowerConsumption_DP">
+      <DtsConnectionManagerID>PowerConsumption_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{E2073B38-DDB5-4948-A251-3BB75751F613}" Name="PowerGeneratorInfo_DP">
+      <DtsConnectionManagerID>PowerGeneratorInfo_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{1924F964-665E-468D-89A3-E1963203FF26}" Name="PowerSupplierCompany_DP">
+      <DtsConnectionManagerID>PowerSupplierCompany_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{AE1BEE95-49DC-40C8-89A0-FEA922DD6660}" Name="stgConsumerAddress_DP">
+      <DtsConnectionManagerID>stgConsumerAddress_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{8CD3DA33-056B-4782-B83E-7F502B36A92C}" Name="TENORB.Electricity_Management_Staging">
+      <DtsConnectionManagerID>TENORB.Electricity_Management_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table Schema="dbo" Table="stgPowerSupplierCompany" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table Schema="dbo" Table="stgPowerSupplierCompany" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table Schema="dbo" Table="stgPowerSupplierCompany" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table Schema="dbo" Table="stgPowerSupplierCompany" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table Schema="dbo" Table="stgPowerSupplierCompany" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="SupplierID" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="CompanyName" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="year_founded" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="HQAddress" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="Province" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="City" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="PostalCode" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="Country" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="Departments" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="PowerPlants" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="Branches" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="SupplierID" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>7</MaxValue>
+        <Mean>4</Mean>
+        <StdDev>2</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="year_founded" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1886</MinValue>
+        <MaxValue>2013</MaxValue>
+        <Mean>1981.42857142857</Mean>
+        <StdDev>40.4540555722745</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="PostalCode" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>3011</MinValue>
+        <MaxValue>3097</MaxValue>
+        <Mean>3044.57142857143</Mean>
+        <StdDev>30.2600969824629</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="Departments" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>3</MinValue>
+        <MaxValue>6</MaxValue>
+        <Mean>4.14285714285714</Mean>
+        <StdDev>0.989743318610787</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="PowerPlants" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>164</MinValue>
+        <MaxValue>1073</MaxValue>
+        <Mean>603</Mean>
+        <StdDev>301.250726140204</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="Branches" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>12</MinValue>
+        <MaxValue>23</MaxValue>
+        <Mean>16.2857142857143</Mean>
+        <StdDev>3.614031611621</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="CompanyName" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>5</MinLength>
+        <MaxLength>13</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="HQAddress" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>17</MinLength>
+        <MaxLength>35</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>33</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>35</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="Province" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>7</MinLength>
+        <MaxLength>13</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="City" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>6</MinLength>
+        <MaxLength>13</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="Country" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>11</MinLength>
+        <MaxLength>11</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>7</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <KeyColumns>
+          <Column Name="SupplierID" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="SupplierID" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>7</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>7</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <KeyColumns>
+          <Column Name="CompanyName" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="CompanyName" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>7</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Coteq</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Enduris</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Enexis</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Liander</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Rendo</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Stedin</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Westlandinfra</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <KeyColumns>
+          <Column Name="year_founded" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="year_founded" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>7</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>1886</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1979</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1986</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1998</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2000</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2008</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2013</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <KeyColumns>
+          <Column Name="HQAddress" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="HQAddress" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>7</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value> Goes 51, ZEELAND</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Didam 153  Arnhem</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Magistratenlaan 116 Hertogenbosch</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Nieuweweg 2685 AP Poeldijk</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Postbusnummer 49 Rotterdam</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Rohofstraat 83, 7605 AT Almelo</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Werner-Senger-Str. 10 65549 Limburg</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <KeyColumns>
+          <Column Name="Province" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="Province" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>7</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Gelderland</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Limburg </Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Brabant</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Overijssel</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Holland</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Westland</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ZEELAND</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <KeyColumns>
+          <Column Name="City" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="City" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>7</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Almelo</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Arnhem</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Duisburg</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hertogenbosch</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Middelburg</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Poeldijk</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Rotterdam</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <KeyColumns>
+          <Column Name="PostalCode" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="PostalCode" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>7</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>3011</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3013</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3016</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3051</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3056</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3068</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3097</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="Country" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Netharlands</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="Departments" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <KeyColumns>
+          <Column Name="PowerPlants" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="PowerPlants" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>7</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>164</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>304</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>437</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>608</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>738</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>897</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1073</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerSupplierCompany" RowCount="7" />
+        <Column Name="Branches" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>6</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>12</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>13</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>15</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>16</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>23</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

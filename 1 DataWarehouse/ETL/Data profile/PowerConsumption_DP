@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{DBAC3780-092E-47F0-91ED-032D94A3AAF2}" Name="Consumer_DP">
+      <DtsConnectionManagerID>Consumer_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{3883BFF9-1451-452E-A4B4-1342A6E9AD87}" Name="ConsumerAddress_DP">
+      <DtsConnectionManagerID>ConsumerAddress_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{F9BF367A-8008-44F8-AE12-6B1C3E404DDE}" Name="ConsumerDistribution_DP">
+      <DtsConnectionManagerID>ConsumerDistribution_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{0022FE8F-521A-4F75-B5D2-A09EF59BCAA6}" Name="ConsumerType_DP">
+      <DtsConnectionManagerID>ConsumerType_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D29A9154-9D02-4103-9C28-9A3E627F9383}" Name="dataprofile">
+      <DtsConnectionManagerID>dataprofile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{DF08EB2F-407B-408C-B813-BAC81ED23C35}" Name="InstallService_DP">
+      <DtsConnectionManagerID>InstallService_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{AEA3C9DC-C915-4942-9A51-318C5503266F}" Name="PowerConsumption_DP">
+      <DtsConnectionManagerID>PowerConsumption_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{E2073B38-DDB5-4948-A251-3BB75751F613}" Name="PowerGeneratorInfo_DP">
+      <DtsConnectionManagerID>PowerGeneratorInfo_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{1924F964-665E-468D-89A3-E1963203FF26}" Name="PowerSupplierCompany_DP">
+      <DtsConnectionManagerID>PowerSupplierCompany_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{AE1BEE95-49DC-40C8-89A0-FEA922DD6660}" Name="stgConsumerAddress_DP">
+      <DtsConnectionManagerID>stgConsumerAddress_DP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{8CD3DA33-056B-4782-B83E-7F502B36A92C}" Name="TENORB.Electricity_Management_Staging">
+      <DtsConnectionManagerID>TENORB.Electricity_Management_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table Schema="dbo" Table="stgPowerConsumption" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table Schema="dbo" Table="stgPowerConsumption" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table Schema="dbo" Table="stgPowerConsumption" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table Schema="dbo" Table="stgPowerConsumption" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table Schema="dbo" Table="stgPowerConsumption" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="ConsumptionID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="AccountNum" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="NoOfUnits" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="SmartMeterPerc" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="entrant" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="Date" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="ConsumptionID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>50000</MaxValue>
+        <Mean>25000.5</Mean>
+        <StdDev>14433.7567268539</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="AccountNum" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>8</MinValue>
+        <MaxValue>20755</MaxValue>
+        <Mean>8730.89904</Mean>
+        <StdDev>5789.12135746065</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="NoOfUnits" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>244.399993896484</MinValue>
+        <MaxValue>1189.11999511719</MaxValue>
+        <Mean>785.483779558716</Mean>
+        <StdDev>147.510950504284</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="SmartMeterPerc" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>0.850000023841858</MaxValue>
+        <Mean>0.137738961523338</Mean>
+        <StdDev>0.206773702178321</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="entrant" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>1</MaxValue>
+        <Mean>0.02864</Mean>
+        <StdDev>0.166792537003308</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="Date" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2016-01-07T00:00:00.0000000</MinValue>
+        <MaxValue>2017-12-07T00:00:00.0000000</MaxValue>
+      </ColumnStatisticsProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <KeyColumns>
+          <Column Name="ConsumptionID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="ConsumptionID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>50000</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="AccountNum" SqlDbType="SmallInt" MaxLength="0" Precision="5" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2500</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="entrant" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>0</Value>
+            <Count>48568</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>1432</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{8CD3DA33-056B-4782-B83E-7F502B36A92C}</DataSourceID>
+        <Table DataSource="TENORB" Database="Electricity_Management_Staging" Schema="dbo" Table="stgPowerConsumption" RowCount="50000" />
+        <Column Name="Date" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>24</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2016-04-07T00:00:00.0000000</Value>
+            <Count>1027</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-09-07T00:00:00.0000000</Value>
+            <Count>2500</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-02-07T00:00:00.0000000</Value>
+            <Count>2390</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-10-07T00:00:00.0000000</Value>
+            <Count>2190</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-06-07T00:00:00.0000000</Value>
+            <Count>2407</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-02-07T00:00:00.0000000</Value>
+            <Count>1010</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-05-07T00:00:00.0000000</Value>
+            <Count>2407</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-12-07T00:00:00.0000000</Value>
+            <Count>2229</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-03-07T00:00:00.0000000</Value>
+            <Count>1015</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-01-07T00:00:00.0000000</Value>
+            <Count>2380</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-11-07T00:00:00.0000000</Value>
+            <Count>2500</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-07-07T00:00:00.0000000</Value>
+            <Count>2437</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-08-07T00:00:00.0000000</Value>
+            <Count>2448</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-01-07T00:00:00.0000000</Value>
+            <Count>1000</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-06-07T00:00:00.0000000</Value>
+            <Count>2054</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-04-07T00:00:00.0000000</Value>
+            <Count>2407</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-05-07T00:00:00.0000000</Value>
+            <Count>1611</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-10-07T00:00:00.0000000</Value>
+            <Count>2500</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-09-07T00:00:00.0000000</Value>
+            <Count>2157</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-11-07T00:00:00.0000000</Value>
+            <Count>2200</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-03-07T00:00:00.0000000</Value>
+            <Count>2407</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-07-07T00:00:00.0000000</Value>
+            <Count>2067</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-08-07T00:00:00.0000000</Value>
+            <Count>2157</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-12-07T00:00:00.0000000</Value>
+            <Count>2500</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

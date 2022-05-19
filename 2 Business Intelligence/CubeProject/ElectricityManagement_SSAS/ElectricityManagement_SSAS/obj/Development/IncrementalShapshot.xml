@@ -1,0 +1,82 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>ElectricityManagement_SSAS</Database>
+    <Server>TENORB\ROOT</Server>
+    <ConnectionString>Data Source=TENORB\ROOT;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>Q32X8q15pTROvTlLzfP1u5wzi/U=16/05/2022 20:43:2816/05/2022 17:25:45</TimeStamp>
+        <ID>
+          <String>Electricity Management DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>PZM5MzJ/fGS2P6xRI5c2SaIiAug=16/05/2022 23:19:2916/05/2022 17:31:14</TimeStamp>
+        <ID>
+          <String>Electricity Management DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>EZJypN0R8LjZKnTc0/OjugmME5g=16/05/2022 18:57:0116/05/2022 17:36:46</TimeStamp>
+        <ID>
+          <String>Dim Power Unit</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>V0CgSmzb3laoPAU+67ZXsYXNNCc=16/05/2022 22:10:1216/05/2022 17:36:46</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>wEO3gm3GShn72/wgKJag6lSh4fw=16/05/2022 21:28:1516/05/2022 17:36:46</TimeStamp>
+        <ID>
+          <String>Dim Consumer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>C2/hrv+F7E58l4Sd5JvchZ89eB0=16/05/2022 21:28:1616/05/2022 17:36:46</TimeStamp>
+        <ID>
+          <String>Dim Power Distribution</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>iCv7kFkmVAa1OTYnZqgt8wWyrSc=17/05/2022 21:06:0216/05/2022 17:36:46zVdS9H2UAxm6dwsrVrw8ZlV+Rcg=16/05/2022 17:36:4716/05/2022 17:36:46</TimeStamp>
+        <ID>
+          <String>Electricity Management DW</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>lUbbWEOP5pIRBqg0zszRWUMqD8g=16/05/2022 17:21:5016/05/2022 17:21:50</TimeStamp>
+      <ID>
+        <String>ElectricityManagement_SSAS</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2022-05-17T15:36:39.38Z</LastDeployed>
+</DeploymentSnapshot>

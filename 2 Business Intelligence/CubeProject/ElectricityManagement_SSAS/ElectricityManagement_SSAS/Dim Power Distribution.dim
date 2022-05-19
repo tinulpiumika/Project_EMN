@@ -1,0 +1,505 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5d5e71ca-c2e2-4c1f-9193-c7459af86482" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Power Distribution</ID>
+  <Name>Dim Power Distribution</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="451" scrolltop="-1079" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="12234" y="16425" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimPowerSupplier" left="20" top="6866" logicalid="6" controlid="1" masterid="0" hint1="0" hint2="0" width="4466" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00007211000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimPowerSupplier" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimPowerDistribution" left="6399" top="719" logicalid="7" controlid="2" masterid="0" hint1="0" hint2="0" width="4868" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e000004130000d30b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimPowerDistribution" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimPowerPlant" left="506" top="0" logicalid="8" controlid="3" masterid="0" hint1="0" hint2="0" width="3493" height="4466" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000a50d000072110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimPowerPlant" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1854" top="4166" logicalid="9" controlid="4" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__DimPowerP__power__114A936A]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="6" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2253" y="6866" />
+              <point x="2253" y="5666" />
+              <point x="2252" y="5666" />
+              <point x="2252" y="4466" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3699" top="1834" logicalid="10" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__DimPowerD__Power__14270015]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="17" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3999" y="2233" />
+              <point x="5199" y="2233" />
+              <point x="5199" y="2232" />
+              <point x="6399" y="2232" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>451</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1079</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="a816b438-ad53-44a5-a4fa-3e9dd1bb96f4">
+    <DataSourceViewID>Electricity Management DW</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="debaafc2-2b34-487e-bdac-20ceb259a7ba">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="f07a4c37-4b1c-4322-adb1-ca551deb3215">
+      <ID>Power Distribution SK</ID>
+      <Name>Power Distribution SK</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0d90f543-8fb1-41df-a54d-f50760c45c75">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="605c12e1-8e99-4073-a7a2-acdf0dba974e">
+            <TableID>dbo_DimPowerDistribution</TableID>
+            <ColumnID>PowerDistributionSK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="40787721-cff6-447c-92cf-d3f19ab6b624">
+          <AttributeID>Power Plant SK</AttributeID>
+          <Name>Power Plant SK</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="76137347-41a7-41fd-a0db-4368ad05197d">
+          <AttributeID>DC POWER</AttributeID>
+          <Name>DC POWER</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6f617995-43a4-453f-aab8-637e32960fff">
+          <AttributeID>AC POWER</AttributeID>
+          <Name>AC POWER</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ce59d1e8-efef-4187-8dac-67264e5cb9da">
+          <AttributeID>TOTAL YIELD</AttributeID>
+          <Name>TOTAL YIELD</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0801d0b3-fc24-499a-93fa-01549b64977d">
+          <AttributeID>Alternate Power Supplier ID</AttributeID>
+          <Name>Alternate Power Supplier ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="82bf66d8-b1d8-4916-bcc3-1c51ed92bd9e">
+          <AttributeID>Company Name</AttributeID>
+          <Name>Company Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="da1ab62c-d03d-4a76-acb0-02cca002d6c0">
+          <AttributeID>Year Founded</AttributeID>
+          <Name>Year Founded</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="53ca3c5e-6565-44c8-96f6-1207a18cbcf3">
+          <AttributeID>HQ Address</AttributeID>
+          <Name>HQ Address</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e9c8ffa8-6796-491b-8d85-e97e525d53e9">
+          <AttributeID>Province</AttributeID>
+          <Name>Province</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="947b5fde-1900-4d9c-a013-a0f8af517e85">
+          <AttributeID>City</AttributeID>
+          <Name>City</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d0f3cd2c-7e68-404f-bb9b-60ee46e8ff6f">
+          <AttributeID>Postal Code</AttributeID>
+          <Name>Postal Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="dce89691-c031-49c4-88b5-1196245f7cf2">
+          <AttributeID>Country</AttributeID>
+          <Name>Country</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="77230371-c79f-48fc-a8a9-21d714558a74">
+          <AttributeID>Departments</AttributeID>
+          <Name>Departments</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ff132d83-74a0-41ad-96f1-4da4ff896df0">
+          <AttributeID>Power Plants</AttributeID>
+          <Name>Power Plants</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4591a214-208c-44ac-9227-e6b2a37b64c3">
+          <AttributeID>Branches</AttributeID>
+          <Name>Branches</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3c84e742-81df-4a45-9666-732d4425b9ab">
+      <ID>Power Plant SK</ID>
+      <Name>Power Plant SK</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ef16187c-1672-4e43-afb7-f05e18ec2285">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4e946be8-bcaa-49af-bc55-557ba89762c7">
+            <TableID>dbo_DimPowerPlant</TableID>
+            <ColumnID>PowerPlantSK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="140c0cb7-c999-4ac2-aae0-0623843f92cb">
+          <AttributeID>Power Supplier SK</AttributeID>
+          <Name>Power Supplier SK</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f248756e-fc2d-41b9-97aa-df5abba085bc">
+      <ID>Power Supplier SK</ID>
+      <Name>Power Supplier SK</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="09f12dc9-9006-4644-9448-d288d3a9665b">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3f6e5b41-a30e-4382-a235-db515769befd">
+            <TableID>dbo_DimPowerSupplier</TableID>
+            <ColumnID>PowerSupplierSK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bb271e0a-6a42-4509-8a33-464907bab3c8">
+      <ID>DC POWER</ID>
+      <Name>DC POWER</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="39b35e58-a0db-4e01-a444-8ed41b671bbd">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1ac1e3c1-956d-4e29-8523-c345cd3b44f5">
+            <TableID>dbo_DimPowerPlant</TableID>
+            <ColumnID>DC_POWER</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="da0dcf02-2700-4393-b1d8-08b9b75a3e4c">
+      <ID>AC POWER</ID>
+      <Name>AC POWER</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b005af6b-247e-4b57-82c2-e6aac4c9bb04">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aa7d1e3f-fe0a-4537-9cdb-ee1a514a5d5e">
+            <TableID>dbo_DimPowerPlant</TableID>
+            <ColumnID>AC_POWER</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cf9a871b-3bf0-40f9-87a6-61d059a3ada9">
+      <ID>TOTAL YIELD</ID>
+      <Name>TOTAL YIELD</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="84733ee6-4f4a-45e6-beab-057565cc6e21">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1bd548b7-b01b-4ec5-a1fc-b1d07f0a4c3f">
+            <TableID>dbo_DimPowerPlant</TableID>
+            <ColumnID>TOTAL_YIELD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b992932e-f607-4f3e-a6d7-993400efedb2">
+      <ID>Alternate Power Supplier ID</ID>
+      <Name>Alternate Power Supplier ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5dc09e84-dfec-4204-8fbd-a64108cf3072">
+          <DataType>UnsignedTinyInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d95aad78-660d-4984-8d58-440f9baa80b4">
+            <TableID>dbo_DimPowerSupplier</TableID>
+            <ColumnID>alternatePowerSupplierID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d2f034bd-0024-4fa7-820d-8560241c8032">
+      <ID>Company Name</ID>
+      <Name>Company Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7b2ed19b-63c2-4692-bd56-a7e2cff3e5f5">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c77d1ec2-1c2d-4aa5-b13b-945795b8f042">
+            <TableID>dbo_DimPowerSupplier</TableID>
+            <ColumnID>CompanyName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1249f579-66e0-4341-a65d-5b8d71be9e7c">
+      <ID>Year Founded</ID>
+      <Name>Year Founded</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="281b861c-acfe-4b3c-a6d6-75e3e8eb1a13">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="59a2cf01-74a3-4f1d-8e1a-1ff8fc1c9e07">
+            <TableID>dbo_DimPowerSupplier</TableID>
+            <ColumnID>year_founded</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="da0cfcc9-5f9b-4c6f-b875-cdc6f40faa74">
+      <ID>HQ Address</ID>
+      <Name>HQ Address</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e3164181-09a2-4daf-b878-ca29c51f717e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="033624da-f3b9-4310-9b02-89f13c1e7c93">
+            <TableID>dbo_DimPowerSupplier</TableID>
+            <ColumnID>HQAddress</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="77a4b65d-3256-4da1-b751-1a5e0f3e4041">
+      <ID>Province</ID>
+      <Name>Province</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c9cbc098-b995-4715-abe0-f0a95712e8c1">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0f24bcf9-227e-4142-a6b1-af4e96db4547">
+            <TableID>dbo_DimPowerSupplier</TableID>
+            <ColumnID>Province</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="937b8c33-fc13-473d-97a9-8388313b7170">
+      <ID>City</ID>
+      <Name>City</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a9dfe802-2569-4419-a7d4-1452fe1ecb50">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7d3d725d-a99b-459b-8b0e-00b6ef2591a5">
+            <TableID>dbo_DimPowerSupplier</TableID>
+            <ColumnID>City</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="58e0eaaf-adee-46e1-9e35-884c396256d1">
+      <ID>Postal Code</ID>
+      <Name>Postal Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="385b4708-df32-4e13-a64f-f8d6bcb6e83b">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="55249be1-7835-47db-bb77-93a236f51c43">
+            <TableID>dbo_DimPowerSupplier</TableID>
+            <ColumnID>PostalCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3dc86ddf-afe4-43c7-9c39-2fbed8fe188b">
+      <ID>Country</ID>
+      <Name>Country</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="17b30eea-b070-471d-a35e-1b4185e73476">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aba4da3f-f605-456a-8b96-07fa5a23357c">
+            <TableID>dbo_DimPowerSupplier</TableID>
+            <ColumnID>Country</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2ceada25-34cd-45c9-bd05-0551fb2f09fe">
+      <ID>Departments</ID>
+      <Name>Departments</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c670936f-61ab-46be-9a43-99ea508b730d">
+          <DataType>UnsignedTinyInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="32c17954-d85d-4f7e-90bd-703db8137100">
+            <TableID>dbo_DimPowerSupplier</TableID>
+            <ColumnID>Departments</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="83759d2e-028e-4a98-bd46-af98041bfadb">
+      <ID>Power Plants</ID>
+      <Name>Power Plants</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7a722c8b-8ecf-46cc-9180-2bb12ef3185b">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="14b1fa88-0abd-4414-8253-77f2b43eb336">
+            <TableID>dbo_DimPowerSupplier</TableID>
+            <ColumnID>PowerPlants</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="12f3e27d-69d3-4714-942a-bc986f483091">
+      <ID>Branches</ID>
+      <Name>Branches</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ca60f72d-f42a-4af6-b153-110953294890">
+          <DataType>UnsignedTinyInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bc07fd68-1bee-4036-ac10-26a7f3c367b2">
+            <TableID>dbo_DimPowerSupplier</TableID>
+            <ColumnID>Branches</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="71307aa4-dec1-401a-8c6c-8d65ee95c86c">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy</Name>
+      <Levels>
+        <Level dwd:design-time-name="b0de1d61-bcf4-4a91-94bb-7c1760b2e5c3">
+          <ID>Power Supplier SK</ID>
+          <Name>Power Supplier SK</Name>
+          <SourceAttributeID>Power Supplier SK</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="3c49981d-7840-4167-bf90-c3ee35610e51">
+          <ID>Power Plant SK</ID>
+          <Name>Power Plant SK</Name>
+          <SourceAttributeID>Power Plant SK</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="b5f99b7d-44ed-4824-b545-d027c8415457">
+          <ID>Power Distribution SK</ID>
+          <Name>Power Distribution SK</Name>
+          <SourceAttributeID>Power Distribution SK</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
